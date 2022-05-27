@@ -1,16 +1,38 @@
 ### Hi there 👋
+MEVCUTBAKİYE = 3000
 
-<!--
-**Mirels/Mirels** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+print("BANKAMIZA HOŞGELDİNİZ ")
+print("1-BAKİYE SORGULAMA")
+print("2-PARA ÇEKME")
+print("3-PARA YATIRMA")
+print("a-ÇIKIŞ")
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+
+
+while True:
+    İŞLEM = input("LÜTFEN GERÇEKLEŞTİRMEK İSTEDİĞİNİZ İŞLEMİ BELİRLEYİNİZ:")
+
+    if İŞLEM == "a":
+        print("ÇIKIŞ İŞLEMİNİZ GERÇEKLEŞTİRİLİYOR LÜTFEN BEKLEYİNİZ....")
+        break
+    elif İŞLEM == "1":
+        print("Bakiyeniz: {}".format(MEVCUTBAKİYE))
+
+    elif İŞLEM=="2":
+        TUTAR = int(input ("Lütfen çekmek istediğiniz miktarı giriniz:"))
+        if MEVCUTBAKİYE - TUTAR < 0:
+            print("ÇEKİLECEK TUTAR MEVCUT BAKİYENİZİN ÜSTÜNDE...")
+            continue
+        MEVCUTBAKİYE -= TUTAR
+        print(f"Bakiyeniz: {MEVCUTBAKİYE}")
+
+    elif İŞLEM == "3":
+        TUTAR = int(input ("Lütfen yatırılacak tutarı giriniz:"))
+
+        MEVCUTBAKİYE = MEVCUTBAKİYE + TUTAR
+        print("Bakiyeniz: {}".format(MEVCUTBAKİYE))
+    else:
+        print("Lütfen tekrar deneyiniz!")
+
+
