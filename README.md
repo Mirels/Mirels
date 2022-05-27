@@ -1,4 +1,4 @@
-### Hi there 👋
+
 MEVCUTBAKİYE = 3000
 
 
